@@ -1,20 +1,23 @@
-import React from "react";
+import React, { useId } from "react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  const key = useId();
   return (
     <div className="">
-      <section className="bg-themebg1  h-screen py-10 w-full">
+      <section className="bg-themebg1  h-screen  flex items-center w-full">
         <div className="w-9/12 m-auto space-y-20">
           <h2 className="text-brand2 text-center">Developer</h2>
           <div className="flex w-full   items-center justify-between">
-            <div className="border-8 p-10 w-[25%]  border-white  rounded-tl-[25%] rounded-br-[25%] ">
+            <div className="border-8 p-10 w-[30%]  border-white  rounded-tl-[25%] rounded-br-[25%] ">
               <div className="  space-y-6  ">
+                {/* name */}
                 <div className="flex flex-col gap-1 items-center justify-center">
                   <img src="/images/profile.svg" alt="profile" />
-                  <p className="title4">Sanket</p>
+                  <p className="title2">Sanket</p>
                   <p>Full Stack Web Developer</p>
                 </div>
+                {/* info */}
                 <div className="space-y-4">
                   {React.Children.toArray(
                     [
@@ -40,6 +43,26 @@ const Home = () => {
                     })
                   )}
                 </div>
+
+                {/* Skills buttons */}
+                <div className="flex flex-wrap gap-4">
+                  {["HTML", "CSS", "JS", "REACT", "Tailwind"]?.map((skill) => {
+                    return (
+                      <div
+                        className="bg-brand1 text-themebg1 body3 px-4 py-1 rounded-full"
+                        key={key}
+                      >
+                        {skill}
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* Resume */}
+                <button className="flex gap-4 rounded-full px-6 m-auto items-center  text-themebg1 w-full  justify-center bg-white p-4">
+                  <span className="body1">Download CV </span>
+                  <img src="/icons/downloadArrow.svg" alt="downloadArrow" />
+                </button>
               </div>
             </div>
             <div className="space-y-2 ml-40 mr-20 ">
@@ -62,8 +85,8 @@ const Home = () => {
               </div>
 
               <p className="text-brand1 title2">LET'S TALK</p>
-            </div>
-            <div className=" ">
+            </div>0
+            <div className="bg-themebg2 p-10 rounded-full ">
               {[
                 {
                   numb: 1,

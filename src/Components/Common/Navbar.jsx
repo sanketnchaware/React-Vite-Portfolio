@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
   const { pathname } = useLocation();
   return (
-    <nav className="flex bg-themebg1 w-full ">
+    <nav className="flex fixed top-0 left-0 bg-themebg1 w-full ">
       <div className="w-10/12 m-auto border-slate-700  border-b py-8">
         <div className=" flex body1 justify-between text-white    w-full  ">
           <Link to="/" className="  flex justify-between gap-2 items-center">
