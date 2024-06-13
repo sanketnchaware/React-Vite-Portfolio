@@ -9,6 +9,10 @@ export default {
         brand2: "#98FAEC",
         brand1: "#12F7D6",
       },
+      backgroundImage: {
+        about_bg: "url('/public/images/about_bg.svg')",
+        skills_bg: "url('/public/images/skills_bg.svg')",
+      },
     },
   },
   plugins: [],
